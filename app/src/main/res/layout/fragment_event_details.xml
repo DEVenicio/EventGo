@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.ui.framgents.EventDetailsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_img_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_margin="@dimen/_4sdp"
+        app:cardCornerRadius="@dimen/_14sdp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/iv_event_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_4sdp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_img_detail"
+        tools:text="Titulo do evento" />
+
+
+    <TextView
+        android:id="@+id/tv_date_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:textColor="#000000"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        tools:text="31 de Janeiro 2023" />
+
+
+    <TextView
+        android:id="@+id/tv_price_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="#000000"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Descrição:"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scroll_description"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:fadeScrollbars="false"
+        android:layout_margin="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"
+        android:background="@drawable/description_bg">
+
+
+        <TextView
+            android:id="@+id/tv_description_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="#000000"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            android:padding="@dimen/_4sdp" />
+
+    </ScrollView>
+
+
+    <fragment
+        tools:layout="@layout/activity_splash_screen"
+        android:id="@+id/map_fragment"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scroll_description">
+    </fragment>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_check_in"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Check-in"
+            android:backgroundTint="#33B538"
+            android:layout_marginVertical="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"/>
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Compartilhar"
+            android:backgroundTint="#33B538"
+            android:layout_marginVertical="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

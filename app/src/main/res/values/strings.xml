@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EventGo</string>
+
+
+    <string name="date">Data: %1$s %2$s %3$s</string>
+    <string name="price">Preço: %.2f</string>
+    <string name="error_request">Tivemos um problema, tente novamente mais tarde</string>
+
+</resources>
